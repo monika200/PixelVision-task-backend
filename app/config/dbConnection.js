@@ -9,7 +9,7 @@ var dbUrl = {
   },
   production: {
     url:
-      "mongodb://localhost:27017/pixelvision"
+      "mongodb+srv://MONIKA20:haachihaachi@cluster0.0saeo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
   }
 };
 
@@ -32,7 +32,7 @@ const options = {
 
 //MONGOOSE DATABASE CONNECTION
 mongoose
-  .connect(dbUrl[process.env.NODE_ENV || "development"].url, options)
+  .connect(dbUrl[process.env.NODE_ENV || "production"].url, options)
   .then(() => {
     console.log("MongoDB connection is Connected");
   })
